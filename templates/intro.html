@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+  <title>Sex Pistols Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='problems.css') }}">
+
+</head>
+<body>
+
+  <div class="navbar">
+  <a href="{{ url_for('intro') }}">☠️☠️Lair☠️☠️</a>
+<a href="{{ url_for('punkorac') }}">Punk Oracle</a>
+  </div>
+
+  <div class="poster-wrapper">
+    
+    <div class="poster left">
+    <img src="{{ url_for('static', filename='johny.jpg') }}" alt="Johnny">
+    </div>
+
+    
+    <div class="main-content">
+      <div class="content">
+        <h1>Never Mind the Bollocks</h1>
+       <img src="{{ url_for('static', filename='sidney.png') }}" alt="Sid Vicious" id="sidbutton" class="sid-button" onclick="giveMeQuote()">
+        <p id="quote"></p>
+      </div>
+    </div>
+
+    
+    <div class="poster right">
+      <img src="{{ url_for('static', filename='67.jpg') }}" alt="Sex Pistols Poster">
+    </div>
+  </div>
+
+  <div id="fallingobjects">✖</div>
+
+  <script src="{{ url_for('static', filename='mate.js') }}"></script>
+</body>
+</html>

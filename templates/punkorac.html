@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sex Pistols Project</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='problems.css') }}">
+</head>
+<body>
+  <div class="navbar">
+    <a href="{{ url_for('intro') }}">☠️☠️Lair☠️☠️</a>
+    <a href="{{ url_for('punkorac') }}">Punk Oracle</a>
+  </div>
+
+  <h1 class="oracle-title">Ask the Punk Oracle</h1>
+
+<form method="POST" class="oracle-form">
+  <input type="text" name="question" placeholder="Ask your question here">
+  <button type="submit" class="kick-button">Kick it</button>
+</form>
+
+
+  {% if answer %}
+  <div class="oracle-answer">
+    <h2>Oracle says:</h2>
+    <br><br>
+    <p>{{ answer }}</p>
+  </div>
+  {% endif %}
+
+  <script src="{{ url_for('static', filename='mate.js') }}"></script>
+</body>
+</html>
